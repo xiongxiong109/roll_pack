@@ -1,0 +1,13 @@
+{
+  "name": "roll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "build:iife": "rollup demo.js -o demoBundle.js -f iife",
+    "build:cjs": "rollup demo.js -o demoBundle.js -f cjs",
+    "build:umd": "rollup demo.js -o demoBundle.js -f umd"
+  },
+  "author": "",
+  "license": "ISC"
+}
