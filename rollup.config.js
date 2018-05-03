@@ -1,4 +1,5 @@
 // 走配置文件打包
+import babel from 'rollup-plugin-babel'
 import json from 'rollup-plugin-json'
 
 export default [
@@ -14,7 +15,10 @@ export default [
         experimentalCodeSplitting: true, // 动态代码分片
         experimentalDynamicImport: true, // 动态代码分片
         plugins: [ // 使用json插件处理json文件
-            json()
+            json(),
+            babel({
+                exclude: 'node_modules/**'
+            })
         ]
     }
 ]

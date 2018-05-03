@@ -1,13 +1,16 @@
 'use strict';
 
-const a = 'asas';
+var a = 'asas';
 
 var version = "1.0.0";
 
-console.log(version);
-console.log(a);
+var show = function show(cb) {
+    // 动态引入
+    Promise.resolve(require("./async_module.js")).then(function (route) {
+        cb(route);
+    });
+};
 
-// 动态引入
-Promise.resolve(require("./async_module.js")).then(route => {
-    console.log(route);
+show(function (route) {
+    console.log('hello ' + version + ' ' + a + ' ' + route);
 });

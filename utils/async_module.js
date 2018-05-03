@@ -1,4 +1,4 @@
 // 异步模块
 const routeIndex = 'hello index page';
 
-mosule.exports = routeIndex
+export default routeIndex
